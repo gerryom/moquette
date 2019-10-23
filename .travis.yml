@@ -9,5 +9,14 @@ cache:
     - $HOME/.gradle/caches/
     - $HOME/.gradle/wrapper/
 
+
+    
+addons:
+  sonarcloud:
+    organization: "gerryom"
+    token:
+      secure: "8bb972abecb46bee1c8d25439ac4882823a790ca" # encrypted value of your token
+
 script:
-    - ./gradlew install test
+  - ./gradlew sonarqube
+    
