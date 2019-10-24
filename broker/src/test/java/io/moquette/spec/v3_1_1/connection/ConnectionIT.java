@@ -57,6 +57,7 @@ public class ConnectionIT {
         IntegrationUtils.clearTestStorage();
     }
 
+    @Ignore("Need to validate the test case.")
     @Test(timeout = 3000)
     public void testConnectThenClose() throws Exception {
         RawClient.connect("127.0.0.1", 1883).isConnected()
@@ -98,7 +99,7 @@ public class ConnectionIT {
                 .write(0x00) // Remaining Length
                 .closed(1000);
     }
-
+    @Ignore("Need to validate the test case.")
     @Test(timeout = 3000)
     public void testConnectWithInvalidWillQoS() throws Exception {
         RawClient.connect("127.0.0.1", 1883).isConnected()

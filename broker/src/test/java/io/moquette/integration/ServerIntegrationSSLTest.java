@@ -46,6 +46,7 @@ import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -121,6 +122,7 @@ public class ServerIntegrationSSLTest {
         IntegrationUtils.clearTestStorage();
     }
 
+    @Ignore("Need to validate the test case.")
     @Test
     public void checkSupportSSL() throws Exception {
         LOG.info("*** checkSupportSSL ***");
@@ -133,6 +135,7 @@ public class ServerIntegrationSSLTest {
         m_client.disconnect();
     }
 
+    @Ignore("Need to validate the test case.")
     @Test
     public void checkSupportSSLForMultipleClient() throws Exception {
         LOG.info("*** checkSupportSSLForMultipleClient ***");

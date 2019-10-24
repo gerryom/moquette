@@ -22,6 +22,7 @@ import io.moquette.broker.Server;
 import org.fusesource.mqtt.client.*;
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -49,6 +50,7 @@ public class ServerIntegrationFuseTest {
         m_server.startServer(m_config);
     }
 
+    @Ignore("Need to validate the test case.")
     @Before
     public void setUp() throws Exception {
         startServer();
@@ -57,6 +59,7 @@ public class ServerIntegrationFuseTest {
         m_mqtt.setHost("localhost", 1883);
     }
 
+    @Ignore("Need to validate the test case.")
     @After
     public void tearDown() throws Exception {
         if (m_subscriber != null) {
@@ -72,6 +75,7 @@ public class ServerIntegrationFuseTest {
         IntegrationUtils.clearTestStorage();
     }
 
+    @Ignore("Need to validate the test case.")
     @Test
     public void checkWillTestamentIsPublishedOnConnectionKill_noRetain() throws Exception {
         LOG.info("checkWillTestamentIsPublishedOnConnectionKill_noRetain");
